@@ -32,10 +32,6 @@ func Execute() {
 	fmt.Printf("\n>>> [By Bus] duration : %+v\n", bus.CalculateETA(bus.CalculateDistance(origin, destination)).Minutes())
 	fmt.Printf("\n>>> [By Bus] cost : %+v\n", bus.CalculateCost())
 
-	// trip.GetDistance(bus)
-	// trip.GetCost(bus)
-	// trip.GetETA(bus)
-
 	// Set new strategy
 	train := &Train{}
 	trip.SetStrategy(train)
@@ -45,10 +41,6 @@ func Execute() {
 	fmt.Printf("\n>>> [By Train] duration : %+v\n", train.CalculateETA(train.CalculateDistance(origin, destination)).Minutes())
 	fmt.Printf("\n>>> [By Train] cost : %+v\n", train.CalculateCost())
 
-	// trip.GetDistance(train)
-	// trip.GetCost(train)
-	// trip.GetETA(train)
-
 	// Set new strategy
 	motorcycle := &Motorcycle{}
 	trip.SetStrategy(motorcycle)
@@ -57,9 +49,5 @@ func Execute() {
 	fmt.Printf("\n>>> [By Motorcycle] distance : %+v\n", motorcycle.CalculateDistance(origin, destination))
 	fmt.Printf("\n>>> [By Motorcycle] duration : %+v\n", motorcycle.CalculateETA(motorcycle.CalculateDistance(origin, destination)).Minutes())
 	fmt.Printf("\n>>> [By Motorcycle] cost : %+v\n", motorcycle.CalculateCost())
-
-	// trip.GetDistance(motorcycle)
-	// trip.GetCost(motorcycle)
-	// trip.GetETA(motorcycle)
 
 }

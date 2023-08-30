@@ -11,17 +11,3 @@ type Strategy interface {
 func (t *Trip) SetStrategy(s Strategy) {
 	t.strategy = s
 }
-
-func (t *Trip) GetDistance(s Strategy) {
-	t.distance = s.CalculateDistance(t.origin, t.destination)
-}
-
-func (t *Trip) GetCost(s Strategy) {
-	t.cost = s.CalculateCost()
-}
-
-func (t *Trip) GetETA(s Strategy) {
-	t.eta = s.CalculateETA(t.distance)
-}
-
-
