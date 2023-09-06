@@ -10,19 +10,18 @@ const (
 
 type Motorcycle struct{}
 
-func (m Motorcycle) CalculateCost() float64 {
-
-	return 0
+func (m Motorcycle) CalculateCost(distance float64) float64 {
+	return distance * defaultMotorcyclePricePerKM
 }
 
 func (m Motorcycle) CalculateETA(distance float64) time.Duration {
 	// NOTE: with assumption there will
 	// be constant speed at 50 km/h
 	duration := distance / defaultMotorcycleSpeed
-	return time.Duration(duration)
+	return time.Duration(duration * float64(time.Hour))
 }
 
 func (m Motorcycle) CalculateDistance(origin, destination Location) float64 {
 
-	return 0
+	return 15
 }

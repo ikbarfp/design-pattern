@@ -1,6 +1,9 @@
 package strategy
 
-import "fmt"
+import (
+	"log"
+	"time"
+)
 
 // Execute - Define implementation
 func Execute() {
@@ -23,31 +26,43 @@ func Execute() {
 		PostalCode:   "12420",
 	}
 
+	var (
+		distance = float64(0)
+		duration = 0 * time.Minute
+		cost     = float64(0)
+	)
+
 	// Set first strategy
 	bus := &Bus{}
 	trip := NewTrip(bus, origin, destination)
 
-	fmt.Println()
-	fmt.Printf("\n>>> [By Bus] distance : %+v\n", bus.CalculateDistance(origin, destination))
-	fmt.Printf("\n>>> [By Bus] duration : %+v\n", bus.CalculateETA(bus.CalculateDistance(origin, destination)).Minutes())
-	fmt.Printf("\n>>> [By Bus] cost : %+v\n", bus.CalculateCost())
+	distance = bus.CalculateDistance(origin, destination)
+	duration = bus.CalculateETA(distance)
+	cost = bus.CalculateCost(distance)
+	log.Println("[By Bus] distance : ", distance)
+	log.Println("[By Bus] duration : ", duration)
+	log.Println("[By Bus] cost : ", cost)
 
 	// Set new strategy
 	train := &Train{}
 	trip.SetStrategy(train)
 
-	fmt.Println()
-	fmt.Printf("\n>>> [By Train] distance : %+v\n", train.CalculateDistance(origin, destination))
-	fmt.Printf("\n>>> [By Train] duration : %+v\n", train.CalculateETA(train.CalculateDistance(origin, destination)).Minutes())
-	fmt.Printf("\n>>> [By Train] cost : %+v\n", train.CalculateCost())
+	distance = train.CalculateDistance(origin, destination)
+	duration = train.CalculateETA(distance)
+	cost = train.CalculateCost(distance)
+	log.Println("[By Train] distance : ", distance)
+	log.Println("[By Train] duration : ", duration)
+	log.Println("[By Train] cost : ", cost)
 
 	// Set new strategy
 	motorcycle := &Motorcycle{}
 	trip.SetStrategy(motorcycle)
 
-	fmt.Println()
-	fmt.Printf("\n>>> [By Motorcycle] distance : %+v\n", motorcycle.CalculateDistance(origin, destination))
-	fmt.Printf("\n>>> [By Motorcycle] duration : %+v\n", motorcycle.CalculateETA(motorcycle.CalculateDistance(origin, destination)).Minutes())
-	fmt.Printf("\n>>> [By Motorcycle] cost : %+v\n", motorcycle.CalculateCost())
+	distance = motorcycle.CalculateDistance(origin, destination)
+	duration = motorcycle.CalculateETA(distance)
+	cost = motorcycle.CalculateCost(distance)
+	log.Println("[By Motorcycle] distance : ", distance)
+	log.Println("[By Motorcycle] duration : ", duration)
+	log.Println("[By Motorcycle] cost : ", cost)
 
 }

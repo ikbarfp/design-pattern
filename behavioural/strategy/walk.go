@@ -8,7 +8,7 @@ const (
 
 type Walk struct{}
 
-func (w Walk) CalculateCost() float64 {
+func (w Walk) CalculateCost(distance float64) float64 {
 	// NOTE: with assumption there will
 	// be no cost at all with walk trip
 	return 0
@@ -18,7 +18,7 @@ func (w Walk) CalculateETA(distance float64) time.Duration {
 	// NOTE: with assumption there will
 	// be constant speed at 10 km/h
 	duration := distance / defaultWalkSpeed
-	return time.Duration(duration)
+	return time.Duration(duration * float64(time.Hour))
 }
 
 func (w Walk) CalculateDistance(origin, destination Location) float64 {

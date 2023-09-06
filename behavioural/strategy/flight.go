@@ -10,16 +10,15 @@ const (
 
 type Flight struct{}
 
-func (f Flight) CalculateCost() float64 {
-
-	return 0
+func (f Flight) CalculateCost(distance float64) float64 {
+	return distance * defaultFlightPricePerKM
 }
 
 func (f Flight) CalculateETA(distance float64) time.Duration {
 	// NOTE: with assumption there will
 	// be constant speed at 500 km/h
 	duration := distance / defaultFlightSpeed
-	return time.Duration(duration)
+	return time.Duration(duration * float64(time.Hour))
 }
 
 func (f Flight) CalculateDistance(origin, destination Location) float64 {

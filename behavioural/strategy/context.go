@@ -1,6 +1,10 @@
 package strategy
 
-import "time"
+import (
+	"fmt"
+	"log"
+	"time"
+)
 
 type Trip struct {
 	strategy    Strategy
@@ -22,12 +26,11 @@ type Location struct {
 }
 
 func NewTrip(s Strategy, origin, destination Location) *Trip {
+	log.Println("Starting a new trip, let's go! ")
+	fmt.Println()
 	return &Trip{
 		strategy:    s,
 		origin:      origin,
 		destination: destination,
-		// cost:        s.CalculateCost(),
-		// eta:         s.CalculateETA(),
-		// distance:    s.CalculateDistance(),
 	}
 }

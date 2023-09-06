@@ -10,19 +10,17 @@ const (
 
 type Bus struct{}
 
-func (b Bus) CalculateCost() float64 {
-
-	return 0
+func (b Bus) CalculateCost(distance float64) float64 {
+	return distance * defaultBusPricePerKM
 }
 
 func (b Bus) CalculateETA(distance float64) time.Duration {
 	// NOTE: with assumption there will
 	// be constant speed at 40 km/h
 	duration := distance / defaultBusSpeed
-	return time.Duration(duration)
+	return time.Duration(duration * float64(time.Hour))
 }
 
 func (b Bus) CalculateDistance(origin, destination Location) float64 {
-
-	return 0
+	return 10
 }
