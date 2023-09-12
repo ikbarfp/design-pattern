@@ -22,7 +22,7 @@ func (ip14 *Iphone14Pro) GetStorage() int {
 }
 
 func (ip14 *Iphone14Pro) GetProcessor() string {
-	return "A16 Pro Bionic"
+	return "A16 Bionic"
 }
 
 func (ip14 *Iphone14Pro) GetCamera() []string {

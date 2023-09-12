@@ -22,7 +22,7 @@ func (gzf5 *GalaxyZFold5) GetProcessor() string {
 	return "Snapdragon 8 Gen 2"
 }
 func (gzf5 *GalaxyZFold5) GetCamera() []string {
-	return []string{""}
+	return []string{"64MP"}
 }
 func (gzf5 *GalaxyZFold5) GetOS() constant.PhoneOS {
 	return constant.Android
