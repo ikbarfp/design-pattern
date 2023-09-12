@@ -15,7 +15,7 @@ func (s Samsung) CreateSmartPhone(phoneName constant.PhoneName) SmartPhone {
 
 	switch phoneName {
 	case constant.GalaxyZFold5:
-		return nil
+		return &samsung.GalaxyZFold5{}
 
 	default:
 		return nil
