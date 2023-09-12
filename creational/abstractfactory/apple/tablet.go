@@ -1,6 +1,8 @@
-package product
+package apple
 
-import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
+import (
+	"github.com/ikbarfp/design-pattern/creational/abstractfactory/constant"
+)
 
 // IpadPro13Inch This object act as an
 // end-product that implement abstraction behaviour
@@ -22,6 +24,6 @@ func (ip13 *IpadPro13Inch) GetProcessor() string {
 func (ip13 *IpadPro13Inch) GetCamera() []string {
 	return []string{"720p"}
 }
-func (ip13 *IpadPro13Inch) GetOS() abstractfactory.TabletOS {
-	return abstractfactory.IpadOS
+func (ip13 *IpadPro13Inch) GetOS() constant.TabletOS {
+	return constant.IpadOS
 }

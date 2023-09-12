@@ -1,6 +1,8 @@
 package main
 
-import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
+import (
+	"github.com/ikbarfp/design-pattern/creational/abstractfactory"
+)
 
 func main() {
 

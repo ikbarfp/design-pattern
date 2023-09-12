@@ -1,6 +1,8 @@
-package product
+package apple
 
-import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
+import (
+	"github.com/ikbarfp/design-pattern/creational/abstractfactory/constant"
+)
 
 // Iphone14Pro This object act as an
 // end-product that implement abstraction behaviour
@@ -27,8 +29,8 @@ func (ip14 *Iphone14Pro) GetCamera() []string {
 	return []string{}
 }
 
-func (ip14 *Iphone14Pro) GetOS() abstractfactory.PhoneOS {
-	return abstractfactory.IOS
+func (ip14 *Iphone14Pro) GetOS() constant.PhoneOS {
+	return constant.IOS
 }
 
 func (ip14 *Iphone14Pro) IsHaveBluetooth() bool {
@@ -61,8 +63,8 @@ func (ip14pm *Iphone14ProMax) GetCamera() []string {
 	return []string{}
 }
 
-func (ip14pm *Iphone14ProMax) GetOS() abstractfactory.PhoneOS {
-	return abstractfactory.IOS
+func (ip14pm *Iphone14ProMax) GetOS() constant.PhoneOS {
+	return constant.IOS
 }
 
 func (ip14pm *Iphone14ProMax) IsHaveBluetooth() bool {

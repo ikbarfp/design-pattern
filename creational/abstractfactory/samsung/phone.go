@@ -1,6 +1,8 @@
-package product
+package samsung
 
-import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
+import (
+	"github.com/ikbarfp/design-pattern/creational/abstractfactory/constant"
+)
 
 // GalaxyZFold5 This object act as an
 // end-product that implement abstraction behaviour
@@ -22,8 +24,8 @@ func (gzf5 *GalaxyZFold5) GetProcessor() string {
 func (gzf5 *GalaxyZFold5) GetCamera() []string {
 	return []string{""}
 }
-func (gzf5 *GalaxyZFold5) GetOS() abstractfactory.PhoneOS {
-	return abstractfactory.Android
+func (gzf5 *GalaxyZFold5) GetOS() constant.PhoneOS {
+	return constant.Android
 }
 func (gzf5 *GalaxyZFold5) IsHaveBluetooth() bool {
 	return true

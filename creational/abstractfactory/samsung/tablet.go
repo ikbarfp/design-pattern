@@ -1,6 +1,8 @@
-package product
+package samsung
 
-import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
+import (
+	"github.com/ikbarfp/design-pattern/creational/abstractfactory/constant"
+)
 
 // GalaxyTabS9Ultra This object act as an
 // end-product that implement abstraction behaviour
@@ -22,6 +24,6 @@ func (gts9u *GalaxyTabS9Ultra) GetProcessor() string {
 func (gts9u *GalaxyTabS9Ultra) GetCamera() []string {
 	return []string{""}
 }
-func (gts9u *GalaxyTabS9Ultra) GetOS() abstractfactory.TabletOS {
-	return abstractfactory.AndroidOS
+func (gts9u *GalaxyTabS9Ultra) GetOS() constant.TabletOS {
+	return constant.AndroidOS
 }

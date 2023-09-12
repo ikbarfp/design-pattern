@@ -1,5 +1,7 @@
 package abstractfactory
 
+import "github.com/ikbarfp/design-pattern/creational/abstractfactory/constant"
+
 type Price interface {
 
 	// GetPrice This method act as
@@ -39,7 +41,7 @@ type SmartPhone interface {
 
 	// GetOS This method can only be used
 	// by factories that make smartphones
-	GetOS() PhoneOS
+	GetOS() constant.PhoneOS
 
 	// IsHaveBluetooth This method can only be used
 	// by factories that make smartphones
@@ -58,7 +60,7 @@ type Laptop interface {
 
 	// GetOS This method can only be used
 	// by factories that make laptops
-	GetOS() LaptopOS
+	GetOS() constant.LaptopOS
 
 	// IsIntelEvo This method can only be used
 	// by factories that make laptops
@@ -73,7 +75,7 @@ type Tablet interface {
 
 	// GetOS This method can only be used
 	// by factories that make tablets
-	GetOS() TabletOS
+	GetOS() constant.TabletOS
 }
 
 // GadgetFactory This interface act as an abstraction factory
@@ -83,7 +85,7 @@ type GadgetFactory interface {
 	// CreateSmartPhone This method can have various
 	// implementations depending on the factory
 	// that abstracts this method
-	CreateSmartPhone(phoneName PhoneName) SmartPhone
+	CreateSmartPhone(phoneName constant.PhoneName) SmartPhone
 
 	// CreateLaptop This method can have various
 	// implementations depending on the factory
