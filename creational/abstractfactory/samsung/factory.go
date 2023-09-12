@@ -6,6 +6,9 @@ import (
 	"github.com/ikbarfp/design-pattern/creational/abstractfactory/samsung/product"
 )
 
+// Samsung This object act as a factory
+// that produce end-product that implement
+// abstraction behaviour from its super class
 type Samsung struct{}
 
 func (s Samsung) CreateSmartPhone(phoneName abstractfactory.PhoneName) abstractfactory.SmartPhone {

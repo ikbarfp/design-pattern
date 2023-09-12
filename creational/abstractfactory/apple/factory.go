@@ -6,7 +6,8 @@ import (
 )
 
 // Apple This object act as a factory
-// that produce end-product
+// that produce end-product that implement
+// abstraction behaviour from its super class
 type Apple struct{}
 
 func (a Apple) CreateSmartPhone(phoneName abstractfactory.PhoneName) abstractfactory.SmartPhone {
