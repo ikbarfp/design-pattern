@@ -7,7 +7,7 @@ import (
 
 type Apple struct{}
 
-func (a Apple) CreatePhone(phoneName abstractfactory.PhoneName) abstractfactory.Phone {
+func (a Apple) CreateSmartPhone(phoneName abstractfactory.PhoneName) abstractfactory.SmartPhone {
 
 	switch phoneName {
 

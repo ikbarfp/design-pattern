@@ -8,7 +8,7 @@ import (
 
 type Samsung struct{}
 
-func (s Samsung) CreatePhone(phoneName abstractfactory.PhoneName) abstractfactory.Phone {
+func (s Samsung) CreateSmartPhone(phoneName abstractfactory.PhoneName) abstractfactory.SmartPhone {
 
 	switch phoneName {
 	case abstractfactory.GalaxyZFold5:
