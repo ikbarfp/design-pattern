@@ -2,8 +2,10 @@ package product
 
 import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
 
-type GalaxyTabS9Ultra struct {
-}
+// GalaxyTabS9Ultra This object act as an
+// end-product that implement abstraction behaviour
+// from SmartPhone
+type GalaxyTabS9Ultra struct{}
 
 func (gts9u *GalaxyTabS9Ultra) GetPrice() float64 {
 	return 24999000

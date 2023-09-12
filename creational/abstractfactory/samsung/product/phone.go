@@ -2,6 +2,9 @@ package product
 
 import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
 
+// GalaxyZFold5 This object act as an
+// end-product that implement abstraction behaviour
+// from SmartPhone
 type GalaxyZFold5 struct{}
 
 func (gzf5 *GalaxyZFold5) GetPrice() float64 {
