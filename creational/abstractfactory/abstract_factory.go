@@ -76,7 +76,7 @@ type Tablet interface {
 	GetOS() TabletOS
 }
 
-// GadgetFactory This interface act as abstraction factory
+// GadgetFactory This interface act as an abstraction factory
 // that produce a factory, not an end-product
 type GadgetFactory interface {
 
