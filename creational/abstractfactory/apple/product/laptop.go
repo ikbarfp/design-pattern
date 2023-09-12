@@ -2,6 +2,9 @@ package product
 
 import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
 
+// MacbookPro13Inch This object act as an
+// end-product that implement abstraction behaviour
+// from Laptop
 type MacbookPro13Inch struct{}
 
 func (mp13 *MacbookPro13Inch) GetPrice() float64 {

@@ -2,6 +2,9 @@ package product
 
 import "github.com/ikbarfp/design-pattern/creational/abstractfactory"
 
+// Iphone14Pro This object act as an
+// end-product that implement abstraction behaviour
+// from SmartPhone
 type Iphone14Pro struct{}
 
 func (ip14 *Iphone14Pro) GetPrice() float64 {

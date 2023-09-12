@@ -5,6 +5,8 @@ import (
 	"github.com/ikbarfp/design-pattern/creational/abstractfactory/apple/product"
 )
 
+// Apple This object act as a factory
+// that produce end-product
 type Apple struct{}
 
 func (a Apple) CreateSmartPhone(phoneName abstractfactory.PhoneName) abstractfactory.SmartPhone {
