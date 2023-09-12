@@ -31,6 +31,7 @@ type Specification interface {
 	GetCamera() []string
 }
 
+// SmartPhone This interface represent product for smartphones
 type SmartPhone interface {
 	Price
 	Specification
@@ -48,6 +49,7 @@ type SmartPhone interface {
 	IsDualSIM() bool
 }
 
+// Laptop This interface represent product for laptops
 type Laptop interface {
 	Price
 	Specification
@@ -61,6 +63,7 @@ type Laptop interface {
 	IsIntelEvo() bool
 }
 
+// Tablet This interface represent product for tablets
 type Tablet interface {
 	Price
 	Specification
