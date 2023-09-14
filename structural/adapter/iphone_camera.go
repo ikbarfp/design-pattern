@@ -11,5 +11,5 @@ import "fmt"
 type H264Video struct{}
 
 func (n *H264Video) PlayH264Video() {
-	fmt.Println("Playing H.264 video . . .")
+	fmt.Println("Playing H.264 video from iPhone 14 Pro Max on OS Windows . . .")
 }

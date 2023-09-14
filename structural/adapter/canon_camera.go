@@ -11,5 +11,5 @@ import "fmt"
 type MovVideo struct{}
 
 func (n *MovVideo) PlayMovVideo() {
-	fmt.Println("Playing .MOV video . . .")
+	fmt.Println("Playing .MOV video from Canon DSLR on OS Windows . . .")
 }

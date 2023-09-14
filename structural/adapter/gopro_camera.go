@@ -11,5 +11,5 @@ import "fmt"
 type HevcVideo struct{}
 
 func (n *HevcVideo) PlayHevcVideo() {
-	fmt.Println("Playing .HEVC video . . .")
+	fmt.Println("Playing .HEVC video from GoPro Hero 4 on OS Windows . . .")
 }

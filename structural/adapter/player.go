@@ -16,5 +16,7 @@ type Player struct {
 
 func (p *Player) PlayVideo(windows WindowsMoviePlayer) {
 	fmt.Println(p.Name, "try to plays some video from a windows computer")
+	fmt.Println()
+	fmt.Println(">>> Injecting supported format (.MP4) video")
 	windows.Play()
 }

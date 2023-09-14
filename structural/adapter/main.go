@@ -6,7 +6,6 @@ func Execute() {
 	player := &Player{Name: "Barsky"}
 	mp4 := &Mp4Video{}
 
-	fmt.Println(">>> Injecting supported format (.MP4) video")
 	player.PlayVideo(mp4)
 
 	h264 := &H264Video{}
