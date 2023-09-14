@@ -7,6 +7,6 @@ import "fmt"
 type Mp4Video struct{}
 
 func (o *Mp4Video) Play() {
-	fmt.Println("Playing .MP4 video on OS Windows . . .")
+	fmt.Println("Playing .MP4 video from Gallery on OS Windows . . .")
 	fmt.Println()
 }
