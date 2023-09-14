@@ -15,6 +15,9 @@ func (a *IphoneVideoAdapter) Play() {
 	fmt.Println()
 }
 
+// CanonCameraVideoAdapter This object has a purpose
+// to act as an adapter from MovVideo format to Mp4Video format,
+// so it can be played with our WindowsMoviePlayer.
 type CanonCameraVideoAdapter struct {
 	format *MovVideo
 }
@@ -25,6 +28,9 @@ func (c *CanonCameraVideoAdapter) Play() {
 	fmt.Println()
 }
 
+// GoproCameraVideoAdapter This object has a purpose
+// to act as an adapter from HevcVideo format to Mp4Video format,
+// so it can be played with our WindowsMoviePlayer.
 type GoproCameraVideoAdapter struct {
 	format *HevcVideo
 }
