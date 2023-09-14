@@ -1,6 +1,8 @@
 package main
 
-import "github.com/ikbarfp/design-pattern/creational/builder"
+import (
+	"github.com/ikbarfp/design-pattern/structural/adapter"
+)
 
 func main() {
 
@@ -17,5 +19,7 @@ func main() {
 
 	//abstractfactory.Execute()
 
-	builder.Execute()
+	//builder.Execute()
+
+	adapter.Execute()
 }
