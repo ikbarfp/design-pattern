@@ -13,13 +13,14 @@ func main() {
 		.
 		.
 	*/
-	//strategy.Execute()
 
-	//factorymethod.Execute()
+	// strategy.Execute()
 
-	//abstractfactory.Execute()
+	// factorymethod.Execute()
 
-	//builder.Execute()
+	// abstractfactory.Execute()
+
+	// builder.Execute()
 
 	adapter.Execute()
 }
