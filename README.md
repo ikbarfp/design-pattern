@@ -13,11 +13,11 @@ go mod tidy
 ```
 
 2. Choose your desired package to see how it works.
-In below picture, we choose package **_structural/adapter_** package :
+In below picture, we choose package ```structural/adapter``` package :
 
 ![img.png](package_example.png)
 
-3. Open **_main.go_** file, and call **_Execute()_** function from these package.
+3. Open **_main.go_** file, and call ```Execute()``` function from these package.
 ```
 package main
 
