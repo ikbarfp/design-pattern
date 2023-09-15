@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/ikbarfp/design-pattern/structural/adapter"
-)
+import "github.com/ikbarfp/design-pattern/structural/bridge"
 
 func main() {
 
@@ -23,5 +21,7 @@ func main() {
 
 	// builder.Execute()
 
-	adapter.Execute()
+	// adapter.Execute()
+
+	bridge.Execute()
 }
