@@ -6,8 +6,15 @@ import (
 )
 
 type OS interface {
+	// BootingUp Just a gimmick method, please don't mind :D
 	BootingUp()
+
+	// OpenBrowser Use this method to see different paradigm as
+	// this abstraction become the parent objects and then just
+	// call this method then inject the browser
 	OpenBrowser(browser Browser)
+
+	// GetName For get OSName
 	GetName() OSName
 }
 
