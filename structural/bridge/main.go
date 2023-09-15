@@ -19,4 +19,13 @@ func Execute() {
 	linuxChrome := &Chrome{computerOS: linux}
 	linuxChrome.Open()
 
+	macFirefox := &Firefox{computerOS: macOS}
+	macFirefox.Open()
+
+	windowsFirefox := &Firefox{computerOS: windows}
+	windowsFirefox.Open()
+
+	linuxFirefox := &Firefox{computerOS: linux}
+	linuxFirefox.Open()
+
 }
