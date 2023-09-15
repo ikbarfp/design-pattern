@@ -18,6 +18,12 @@ type Chrome struct {
 }
 
 func (c *Chrome) Open() {
+	// We can put our logic here because this concrete object
+	// can have different business case to another concrete object
+	// from same abstraction
+
+	// In this example,
+	// Chrome can only be opened from Mac & Windows
 	switch c.computerOS.GetName() {
 	case MacComputer:
 		c.version = "v1.0.0"
@@ -43,15 +49,21 @@ type Firefox struct {
 }
 
 func (f *Firefox) Open() {
+	// We can put our logic here because this concrete object
+	// can have different business case to another concrete object
+	// from same abstraction
+
+	// In this example,
+	// Firefox can be opened from all OS
 	switch f.computerOS.GetName() {
 	case MacComputer:
 		f.version = "v3.0.0"
-		fmt.Println("Opening Firefox Browser from", f.computerOS.GetName()+"with version", f.version)
+		fmt.Println("Opening Firefox Browser from", f.computerOS.GetName()+" with version", f.version)
 	case WindowsComputer:
 		f.version = "v4.0.0"
-		fmt.Println("Opening Firefox Browser from", f.computerOS.GetName()+"with version", f.version)
+		fmt.Println("Opening Firefox Browser from", f.computerOS.GetName()+" with version", f.version)
 	default:
-		fmt.Println("Sorry Firefox Browser doesn't support", f.computerOS.GetName(), "OS!")
+		fmt.Println("Opening Firefox Browser from", f.computerOS.GetName()+" with version", f.version)
 	}
 }
 
