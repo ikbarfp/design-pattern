@@ -10,6 +10,9 @@ type Browser interface {
 }
 
 type Chrome struct {
+	// computerOS This property need to be injected on concrete object,
+	// because it will act as a bridge from current abstraction to another
+	// abstraction
 	computerOS OS
 	version    string
 }
@@ -32,6 +35,9 @@ func (c *Chrome) GetName() BrowserName {
 }
 
 type Firefox struct {
+	// computerOS This property need to be injected on concrete object,
+	// because it will act as a bridge from current abstraction to another
+	// abstraction
 	computerOS OS
 	version    string
 }
